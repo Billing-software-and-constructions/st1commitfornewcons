@@ -43,9 +43,10 @@ const Services = () => {
                   src={service.image} 
                   alt={`${service.title} services by New Star Construction in Pondicherry - ${service.description}`}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                  width="400"
-                  height="256"
+                  width="512"
+                  height="320"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 to-transparent" aria-hidden="true" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">

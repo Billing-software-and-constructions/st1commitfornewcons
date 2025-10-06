@@ -14,6 +14,7 @@ const About = () => {
               width="600"
               height="400"
               loading="lazy"
+              decoding="async"
             />
           </div>
           <div>

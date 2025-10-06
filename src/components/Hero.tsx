@@ -35,11 +35,13 @@ const Hero = () => {
               role="group"
               aria-label={`Slide ${index + 1} of ${slides.length}`}
             >
-              <div 
-                className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${slide.opacity}`}
-                style={{ backgroundImage: `url(${slide.image})` }}
-                role="img"
-                aria-label={`Construction project showcase ${index + 1}`}
+              <img 
+                src={slide.image}
+                alt={`Construction project showcase ${index + 1}`}
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${slide.opacity}`}
+                {...(index === 0 ? { fetchpriority: 'high' as const } : { loading: 'lazy' as const })}
+                width="1920"
+                height="600"
               />
             </div>
           ))}
