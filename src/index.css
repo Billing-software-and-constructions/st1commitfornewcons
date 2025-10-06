@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 227 36% 17%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 227 36% 17%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 227 36% 17%;
+
+    --primary: 38 91% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 227 36% 17%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 227 20% 45%;
+
+    --accent: 38 91% 55%;
+    --accent-foreground: 227 36% 17%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 38 91% 55%;
+
+    --radius: 0.5rem;
+
+    /* Construction theme colors */
+    --navy: 227 36% 17%;
+    --yellow: 38 91% 55%;
+    --yellow-dark: 38 91% 45%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(227 36% 17% / 0.9), hsl(227 36% 25% / 0.85));
+    
+    /* Shadows */
+    --shadow-elegant: 0 10px 40px -10px hsl(227 36% 17% / 0.2);
+    --shadow-card: 0 4px 20px hsl(227 36% 17% / 0.1);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply overflow-x-hidden;
+  }
+
+  body {
+    @apply bg-background text-foreground overflow-x-hidden;
+  }
+}
